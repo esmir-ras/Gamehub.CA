@@ -1,0 +1,34 @@
+body {
+  background-color: lightblue;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+}
+
+header,
+main,
+aside,
+footer {
+  background-color: white;
+}
+
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}
+
+.container {
+  background-color: blue;
+}
