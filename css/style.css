@@ -26,6 +26,8 @@ nav ul li {
 nav a {
   text-decoration: none;
   color: gray;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 25px;
 }
 p {
   color: white;
@@ -35,6 +37,7 @@ p {
   margin: auto;
   padding-left: 25px;
   padding-right: 25px;
+  padding-top: 55px;
 }
 .row {
   display: flex;
@@ -55,6 +58,7 @@ p {
   margin: 20px 0;
   line-height: 60px;
   color: #eca43f;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 .button {
   display: inline-block;
@@ -70,6 +74,14 @@ p {
 
 .categories {
   margin: 70px 0;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto 80px;
+  position: relative;
+  line-height: 60px;
+  color: black;
 }
 
 .col3 {
@@ -130,13 +142,71 @@ footer {
   padding: 10px;
   display: inline-block;
 }
+/*------- Cart Details -------*/
+.cart-page {
+  margin: 80px auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cart-info p {
+  color: black;
+}
+th {
+  text-align: left;
+  padding: 5px;
+  color: white;
+  background: #ff523b;
+  font-weight: normal;
+}
+td {
+  padding: 10px 5px;
+}
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a {
+  color: orange;
+}
+
+td img {
+  margin-right: 10px;
+  width: 90px;
+  height: 100px;
+}
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-price table {
+  border-top: 3px solid #ff523b;
+  width: 100%;
+  max-width: 380px;
+}
+td:last-child {
+  text-align: right;
+}
+
+th:last-child {
+  text-align: right;
+}
 
 /*------- media query for meny -------*/
 
 @media only screen and (max-width: 800px) {
   nav ul {
     position: absolute;
-    top: 70px;
+    top: 0px;
     left: 0;
     background: #333;
     width: 100%;
@@ -151,6 +221,9 @@ footer {
   nav ul li a {
     color: fff;
   }
+  .cart-info {
+    margin-top: 80px;
+  }
 }
 
 /*media query for less than 600 screen size*/
@@ -163,5 +236,11 @@ footer {
   .col3,
   .col4 {
     flex-basis: 100%;
+  }
+  .cart-info p {
+    display: none;
+  }
+  .cart-info {
+    margin-top: 80px;
   }
 }
