@@ -31,6 +31,7 @@ nav a {
 }
 p {
   color: white;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 .container {
   max-width: 1300px;
@@ -39,12 +40,20 @@ p {
   padding-right: 25px;
   padding-top: 55px;
 }
+
+.container-cart {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
 .row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
+  text-align: center;
 }
+
 .col2 {
   flex-basis: 50%;
   min-width: 300px;
@@ -67,9 +76,28 @@ p {
   padding: 8px 35px;
   margin: 30px 0;
   border-radius: 30px;
+  text-decoration: none;
 }
+.button2 {
+  display: inline-block;
+  background: #0585ff;
+  color: white;
+  padding: 8px 35px;
+  border-radius: 30px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-decoration: none;
+}
+
 .header {
   background: radial-gradient(rgb(6, 42, 83), rgb(1, 8, 17));
+  background: url(/images/background1.jpg);
+}
+.header2 {
+  background: radial-gradient(rgb(6, 42, 83), rgb(1, 8, 17));
+}
+
+h4 {
+  color: white;
 }
 
 .categories {
@@ -81,7 +109,15 @@ p {
   margin: 0 auto 80px;
   position: relative;
   line-height: 60px;
-  color: black;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: white;
+}
+.title-profile {
+  color: white;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+.profile-picture {
+  border-radius: 160px;
 }
 
 .col3 {
@@ -100,8 +136,13 @@ p {
   padding-left: 25px;
   padding-right: 25px;
 }
+.rating {
+  color: #eca43f;
+  margin-top: 5px;
+}
 .small-container h2 {
   text-align: center;
+  font-size: 35px;
 }
 
 .col4 {
@@ -121,14 +162,14 @@ p {
 }
 
 .col4 p {
-  color: black;
+  color: white;
   font-size: 14px;
 }
-
+/*-------------Footer----------*/
 footer {
   text-align: center;
-  background-color: white;
-  color: #000000;
+  background: radial-gradient(rgb(6, 42, 83), rgb(1, 8, 17));
+  color: white;
 }
 
 .content-wrap {
@@ -141,10 +182,16 @@ footer {
 .contact-info a {
   padding: 10px;
   display: inline-block;
+  text-decoration: none;
+  color: white;
 }
 /*------- Cart Details -------*/
 .cart-page {
   margin: 80px auto;
+}
+.cart-page h1 {
+  text-align: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 table {
   width: 100%;
@@ -162,7 +209,7 @@ th {
   text-align: left;
   padding: 5px;
   color: white;
-  background: #ff523b;
+  background: #eca43f;
   font-weight: normal;
 }
 td {
@@ -177,6 +224,10 @@ td input {
 td a {
   color: orange;
 }
+td i {
+  font-size: 40px;
+  color: #0585ff;
+}
 
 td img {
   margin-right: 10px;
@@ -189,7 +240,7 @@ td img {
 }
 
 .total-price table {
-  border-top: 3px solid #ff523b;
+  border-top: 3px solid #eca43f;
   width: 100%;
   max-width: 380px;
 }
@@ -201,6 +252,69 @@ th:last-child {
   text-align: right;
 }
 
+/*------- Account Page --------*/
+.account-page {
+  padding: 50px 0;
+  background: radial-gradient(rgb(6, 42, 83), rgb(1, 8, 17));
+}
+.form-container {
+  background: #fff;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+}
+
+.form-container span {
+  font-weight: bold;
+  padding: 0 10px;
+  color: #555;
+  cursor: pointer;
+  width: 100px;
+  display: inline-block;
+}
+.form-btn {
+  display: inline-block;
+}
+.form-container form {
+  max-width: 300px;
+  padding: 0 20px;
+  position: absolute;
+  top: 130px;
+}
+form input {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: 1px solid black;
+}
+
+form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+#LoginForm {
+  left: -300px;
+}
+#RegForm {
+  left: 0;
+}
+form a {
+  font-size: 10px;
+}
+#Indicator {
+  width: 100px;
+  border: none;
+  background: #555;
+  height: 3px;
+  margin-top: 8px;
+  transform: translateX(100px);
+}
 /*------- media query for meny -------*/
 
 @media only screen and (max-width: 800px) {
@@ -208,9 +322,10 @@ th:last-child {
     position: absolute;
     top: 0px;
     left: 0;
-    background: #333;
+    background: black;
     width: 100%;
   }
+
   nav ul li {
     display: block;
     margin-right: 5px;
@@ -223,6 +338,12 @@ th:last-child {
   }
   .cart-info {
     margin-top: 80px;
+  }
+  .cart-page {
+    margin-top: 100px;
+  }
+  .title-profile {
+    margin-top: 85px;
   }
 }
 
@@ -238,9 +359,20 @@ th:last-child {
     flex-basis: 100%;
   }
   .cart-info p {
-    display: none;
   }
   .cart-info {
     margin-top: 80px;
+  }
+  .cart-page {
+    margin-top: 100px;
+  }
+  .col4 img {
+    width: 150px;
+  }
+  .col2 h1 {
+    padding-top: 10px;
+  }
+  .title-profile {
+    margin-top: 85px;
   }
 }
