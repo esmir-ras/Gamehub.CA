@@ -29,6 +29,24 @@ nav a {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 25px;
 }
+/*-----------SEARCH-----------*/
+.search-bar {
+  width: 50%;
+  margin: auto;
+  background: black;
+}
+.search-bar input,
+button {
+  width: 75%;
+  border: 2px solid rgb(0, 0, 0);
+  border-right: 0px;
+  padding: 12px;
+}
+.search-bar button {
+  width: 25%;
+  float: right;
+  border-left: 0px;
+}
 p {
   color: white;
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -344,6 +362,10 @@ form a {
   }
   .title-profile {
     margin-top: 85px;
+  }
+  .search-bar input,
+  button {
+    /*padding-top: 100px;*/
   }
 }
 
