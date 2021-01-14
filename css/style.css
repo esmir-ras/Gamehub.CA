@@ -215,6 +215,9 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
+.cart-submit {
+  margin: 0 250px 0 250px;
+}
 
 .cart-info {
   display: flex;
@@ -358,7 +361,7 @@ form a {
     margin-top: 80px;
   }
   .cart-page {
-    margin-top: 100px;
+    margin-top: 130px;
   }
   .title-profile {
     margin-top: 85px;
@@ -366,6 +369,16 @@ form a {
   .search-bar input,
   button {
     /*padding-top: 100px;*/
+  }
+  .container {
+    padding-top: 120px;
+  }
+  .cart-submit {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .container-img img {
+    width: 500px;
   }
 }
 
@@ -396,5 +409,8 @@ form a {
   }
   .title-profile {
     margin-top: 85px;
+  }
+  .container-img img {
+    width: 430px;
   }
 }
