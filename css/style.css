@@ -336,7 +336,7 @@ form a {
   margin-top: 8px;
   transform: translateX(100px);
 }
-/*------- media query for meny -------*/
+/*--------------------- Media Q ---------------------*/
 
 @media only screen and (max-width: 800px) {
   nav ul {
@@ -382,7 +382,6 @@ form a {
   }
 }
 
-/*media query for less than 600 screen size*/
 @media only screen and (max-width: 600px) {
   .row {
     text-align: center;
@@ -412,5 +411,8 @@ form a {
   }
   .container-img img {
     width: 430px;
+  }
+  .cart-page {
+    padding-top: 27px;
   }
 }
