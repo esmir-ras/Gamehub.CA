@@ -29,6 +29,9 @@ nav a {
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 25px;
 }
+nav a:hover {
+  /*font-size: 27px;*/
+}
 /*-----------SEARCH-----------*/
 .search-bar {
   width: 50%;
@@ -105,6 +108,9 @@ p {
   font-family: "Barlow Semi Condensed", sans-serif;
   text-decoration: none;
 }
+.button2:hover {
+  /*font-size: 20px;*/
+}
 
 .header {
   background: radial-gradient(rgb(6, 42, 83), rgb(1, 8, 17));
@@ -129,6 +135,9 @@ h4 {
   line-height: 60px;
   font-family: "Barlow Semi Condensed", sans-serif;
   color: white;
+}
+.title:hover {
+  /*font-size: 50px;*/
 }
 .title-profile {
   color: white;
@@ -201,7 +210,11 @@ footer {
   padding: 10px;
   display: inline-block;
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+.contact-info a:hover {
+  font-size: large;
 }
 /*------- Cart Details -------*/
 .cart-page {
@@ -272,11 +285,19 @@ td:last-child {
 th:last-child {
   text-align: right;
 }
+.cart-page p {
+  color: black;
+  text-align: center;
+  margin-top: 10px;
+  font-size: large;
+}
 
 /*------- Account Page --------*/
 .account-page {
   padding: 50px 0;
   background: radial-gradient(rgb(6, 42, 83), rgb(1, 8, 17));
+}
+.iphone {
 }
 .form-container {
   background: #fff;
@@ -336,6 +357,26 @@ form a {
   margin-top: 8px;
   transform: translateX(100px);
 }
+.checkout-row img {
+  width: 200px;
+  margin-left: 415px;
+}
+/*------------------Contact Page--------------*/
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-1 {
+  padding-right: 20px;
+  color: white;
+}
+.contact-img {
+}
+.message-input {
+  padding-bottom: 100px;
+}
 /*--------------------- Media Q ---------------------*/
 
 @media only screen and (max-width: 800px) {
@@ -380,6 +421,10 @@ form a {
   .container-img img {
     width: 500px;
   }
+  .checkout-row img {
+    margin-left: 260px;
+    margin-top: 15px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -414,5 +459,16 @@ form a {
   }
   .cart-page {
     padding-top: 27px;
+  }
+  .checkout-row img {
+    margin-left: 60px;
+    margin-top: 15px;
+  }
+  .contact-map {
+    width: 430px;
+  }
+  .button2 {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
