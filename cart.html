@@ -1,143 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <script src="https://kit.fontawesome.com/31723676fb.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
-    
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="logo">
-        <img
-          src="images/Gamehub-Logo.png"
-          width="130px"
-          alt="Gamehub Logo"/>
-      </div>
-      <nav>
-        <ul>
-          <div class="search-bar">
-            <input placeholder="search" type="text">
-            <a href="search-results.html"><button class="searchbutton">SEARCH</button></a>
-          </div>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="store.html">Store</a></li>
-          <li><a href="profile.html">Account</a></li>
-          <li><a href="account.html">Login/Register</a></li>
-          <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-        </ul>
-      </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://kit.fontawesome.com/31723676fb.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Gamehub-Logo.png" width="130px" alt="Gamehub Logo" />
+      </a>
     </div>
-   
-    <div class="small-container cart-page">
-      <h1>CART</h1>
-      <form class="cart-submit" action="Submit">
-        <input placeholder="Name" type="text">
-        <input placeholder="Country" type="text">
-        <input placeholder="Address" type="text">
-        <input placeholder="Tel" type="tel">
+    <div class="navbar-list">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="store.html">Store</a></li>
+        <li class="nav-item"><a href="profile.html">Account</a></li>
+        <li class="nav-item"><a href="account.html">Login/Register</a></li>
+        <li class="nav-item active"><a href="cart.html">
+            <span class="cart-icon">
+              <small class="card-count">0</small>
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+          </a></li>
+      </ul>
+    </div>
+    <div class="search-bar">
+      <input placeholder="Search" type="text">
+      <a href="search-results.html"><button class="searchbutton">SEARCH</button></a>
+    </div>
+  </nav>
 
-    </form>
-        <table>
-          <tr>
-          <th>Product</th>
-          <th>Quantity</th>
-          <th>Subtotal</th>
-          </tr>
-          <tr>
-            <td>
-              <div class="cart-info">
-                  <img src="/images/mk11.jpg" alt="Mortal Kombat11">
-                  <div>
-                     <p>Mortal Kombat 11</p>
-                     <small>Price: $50.00</small> 
-                     <br>
-                     <a href="">Remove</a>
-                  </div>
-              </div>  
-            </td>
-            <td><input type="number" value="1"></td>
-            <td>$50.00</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="cart-info">
-                  <img src="/images/mk11.jpg" alt="Mortal Kombat11">
-                  <div>
-                     <p>Mortal Kombat 11</p>
-                     <small>Price: $50.00</small> 
-                     <br>
-                     <a href="">Remove</a>
-                  </div>
-              </div>  
-            </td>
-            <td><input type="number" value="1"></td>
-            <td>$50.00</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="cart-info">
-                  <img src="/images/mk11.jpg" alt="Mortal Kombat11">
-                  <div>
-                     <p>Mortal Kombat 11</p>
-                     <small>Price: $50.00</small> 
-                     <br>
-                     <a href="">Remove</a>
-                  </div>
-              </div>  
-            </td>
-            <td><input type="number" value="1"></td>
-            <td>$50.00</td>
-          </tr>
-        </table>
-
-<div class="total-price">
-    <table>
-        <tr>
-        <td>Subtotal</td>
-        <td>$150.00</td>
-        </tr>
-        <tr>
-            <td>Tax</td>
-            <td>25.00</td>
+  <div class="small-container cart-page page-height">
+    <h1>CART</h1>
+    <div class="cart-conent-wrapper">
+      <form id="contact-form" class="cart-submit">
+        <p>Fill this form to continue</p>
+        <div class="form-control">
+          <label for="fullname">
+            Name (required) </label>
+          <input placeholder="John Doe" name="fullname" type="text" id="name">
+          <small></small>
+        </div>
+        <div class="form-control">
+          <label for="country">
+            Country (required) </label>
+          <input placeholder="America" name="country" type="text" id="country">
+          <small></small>
+        </div>
+        <div class="form-control">
+          <label for="address">
+            Address (required) </label>
+          <input placeholder="Florida" type="text" id="address">
+          <small></small>
+        </div>
+        <div class="form-control">
+          <label for="telephone">
+            Telephone (required) </label>
+          <input placeholder="for eg: 415-555-1212" type="tel" name="telephone" id="telephone">
+          <small></small>
+        </div>
+        <div class="form-control">
+          <label for="message">
+            Message (required) </label>
+          <textarea placeholder="Type your message here" name="message" id="message"></textarea>
+          <small></small>
+        </div>
+        <div class="submit-button">
+          <button class="button continue-btn" id="submit">Continue</button>
+        </div>
+      </form>
+      <section class="content-section">
+        <div class="cart-row">
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-price cart-header cart-column">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+          <!-- <div class="cart-row">
+            <div class="cart-item cart-column">
+              <img class="cart-item-image" src="/images/mk11.jpg" alt="Mortal Kombat11" width="100" height="100">
+              <span class="cart-item-title">Mortal Kombat 11</span>
+            </div>
+            <span class="cart-price cart-column">$19.99</span>
+            <div class="cart-quantity cart-column">
+              <input class="cart-quantity-input" type="number" value="1">
+              <button class="btn btn-danger" type="button">REMOVE</button>
+            </div>
+          </div> -->
+          <!-- <div class="cart-row">
+            <div class="cart-item cart-column">
+              <img class="cart-item-image" src="/images/mk11.jpg" alt="Mortal Kombat11" width="100" height="100">
+              <span class="cart-item-title">Mortal Kombat 11</span>
+            </div>
+            <span class="cart-price cart-column">$9.99</span>
+            <div class="cart-quantity cart-column">
+              <input class="cart-quantity-input" type="number" value="2">
+              <button class="btn btn-danger" type="button">REMOVE</button>
+            </div>
+          </div> -->
+          <!-- <div class="cart-row">
+            <div class="cart-item cart-column">
+              <img class="cart-item-image" src="/images/mk11.jpg" alt="Mortal Kombat11" width="100" height="100">
+              <span class="cart-item-title">Mortal Kombat 11</span>
+            </div>
+            <span class="cart-price cart-column">$9.99</span>
+            <div class="cart-quantity cart-column">
+              <input class="cart-quantity-input" type="number" value="2">
+              <button class="btn btn-danger" type="button">REMOVE</button>
+            </div>
+          </div> -->
+        </div>
+        <div class="total-price">
+          <table>
+            <tr>
+              <td>Subtotal</td>
+              <td class="sub-total-price">
+                <p>$150.00</p>
+              </td>
             </tr>
             <tr>
-                <td>Subtotal</td>
-                <td>$175.00</td>
-                </tr>
-                <tr>
-                  <td>
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                  </td>
-                </tr>
-                
-    </table>
-    
-</div>
-   </div>
-   <div class="container-cart">
-    <a href="checkout.html" class="button2">Checkout</a>
-   </div>
-    <!--Footer-->
-        <footer>
-            <div class="content-wrap">
-                <h3>Copyright &copy;</h3>
-       <!-- Social media and contact links.-->
-                <div class="contact-info">
-                    <a href=>email@example.com</a>
-                    <a href="contact.html">Contact</a>
-                    <a href=>Instagram</a>
-                    <a href=>Facebook</a>
-                </div>
-            </footer>
-        </body>
-      </html>
+              <td>Tax</td>
+              <td>
+                <p>$25.00</p>
+              </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td class="final-price">
+                <p>$175.00</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-mastercard"></i>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="container-cart">
+          <a href="checkout.html" class="button">Checkout</a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!--Footer-->
+  <footer>
+    <div class="content-wrap">
+      <h3>Copyright &copy;</h3>
+      <!-- Social media and contact links.-->
+      <div class="contact-info">
+        <a href="#">email@example.com</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+  </footer>
+  <script src="js/index.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+
+</html>
