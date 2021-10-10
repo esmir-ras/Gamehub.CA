@@ -1,3 +1,9 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body,
 div,
 h1,
@@ -516,27 +522,26 @@ form .btn {
 .checkout-row img {
   width: 100px;
 }
-.checkout-cart{
+.checkout-cart {
   text-align: center;
 }
 
-
-.right-part p{
+.right-part p {
   text-align: left;
 }
-.purchased-producrs{
+.purchased-producrs {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px;
 }
-.products-purchased{
+.products-purchased {
   padding-right: 10px;
   padding-left: 10x;
   margin-bottom: 15px;
 }
-.pro{
+.pro {
   border: 1px solid #ddd;
   padding: 10px;
 }
